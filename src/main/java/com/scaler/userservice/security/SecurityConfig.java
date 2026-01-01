@@ -17,9 +17,7 @@ public class SecurityConfig {
         this.jwtFilter = jwtFilter;
     }
 
-    /**
-     * 🔓 PUBLIC ENDPOINTS — NO AUTH, NO JWT
-     */
+    // PUBLIC ENDPOINTS — NO AUTH, NO JWT
     @Bean
     @Order(1)
     public SecurityFilterChain publicEndpoints(HttpSecurity http) throws Exception {
@@ -37,9 +35,7 @@ public class SecurityConfig {
         return http.build();
     }
 
-    /**
-     * 🔒 PROTECTED ENDPOINTS — JWT REQUIRED
-     */
+    // PROTECTED ENDPOINTS — JWT REQUIRED
     @Bean
     @Order(2)
     public SecurityFilterChain protectedEndpoints(HttpSecurity http) throws Exception {

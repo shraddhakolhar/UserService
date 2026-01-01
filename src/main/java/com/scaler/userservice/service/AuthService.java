@@ -27,9 +27,7 @@ public class AuthService {
         this.jwtUtil = jwtUtil;
     }
 
-    /**
-     * 🔐 Register a new user
-     */
+    // Register a new user
     @Transactional
     public void register(RegisterRequest request) {
 
@@ -46,9 +44,7 @@ public class AuthService {
         userRepository.save(user);
     }
 
-    /**
-     * 🔑 Login user and generate JWT
-     */
+    // Login user and generate JWT token
     public AuthResponse login(LoginRequest request) {
 
         UserEntity user = userRepository.findByEmail(request.getEmail())
