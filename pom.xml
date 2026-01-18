@@ -109,6 +109,14 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- spring-kafka -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>4.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!-- Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
